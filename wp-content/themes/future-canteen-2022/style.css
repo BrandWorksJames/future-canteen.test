@@ -938,3 +938,30 @@ textarea {
 /* Custom
 --------------------------------------------- */
 /* Define Colour Variables */
+/* Fonts */
+@font-face {
+	font-family: 'Archivo Expanded';
+	src: url("fonts/Archivo-Expanded-Regular.woff2") format("woff2"), url("fonts/Archivo-Expanded-Regular.woff") format("woff"), url("fonts/Archivo-Expanded-Regular.ttf") format("truetype");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Archivo Expanded';
+	src: url("fonts/Archivo-Expanded-Medium.woff2") format("woff2"), url("fonts/Archivo-Expanded-Medium.woff") format("woff"), url("fonts/Archivo-Expanded-Medium.ttf") format("truetype");
+	font-weight: bold;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cygnito Mono';
+	src: url("fonts/Cygnito-Mono.woff2") format("woff2"), url("fonts/Cygnito-Mono.woff") format("woff"), url("fonts/Cygnito-Mono.ttf") format("truetype");
+	font-display: swap;
+}
+
+html {
+	font-size: 16px;
+}
+
+#page * {
+	font-family: 'Archivo Expanded',Helvetica,Arial,sans-serif;
+}
