@@ -45,3 +45,77 @@ html {
     font-family: 'Archivo Expanded',Helvetica,Arial,sans-serif;
   }
 }
+
+/* Header */
+
+body.logged-in header {
+  margin-top: 32px;
+}
+
+body.scrolled {
+  #masthead {
+    padding: 1.5rem;
+
+    .site-branding img {
+     height: 2.5rem;
+   }
+  }
+
+  #primary {
+    margin-top: 5.5rem;
+  }
+}
+
+#masthead {
+  width: 100%;
+  background: $white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+
+  .site-branding {
+    font-size: 0;
+
+    img {
+      transition: all 0.3s ease-out;
+      height: 4rem;
+      width: auto;
+    }
+
+    a {
+      font-size: 0;
+    }
+  }
+
+  #site-navigation {
+    flex: 1;
+
+    ul {
+      gap: 2rem;
+      justify-content: flex-end;
+    }
+
+    a {
+      font-family: 'Cygnito Mono',monospace;
+      font-size: 1.4rem;
+      color: $blue;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
+
+#primary {
+  margin-top: 8rem;
+}

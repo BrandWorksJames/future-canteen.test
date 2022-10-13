@@ -47,11 +47,20 @@ function future_canteen_2022_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
+	/*register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'future-canteen-2022' ),
 		)
-	);
+	);*/
+
+
+    register_nav_menus(
+        array(
+            'header-menu' => 'Header Menu',
+            'footer-primary-menu' => 'Footer Primary Menu',
+						'footer-secondary-menu' => 'Footer Secondary Menu',
+        )
+    );
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -142,6 +151,7 @@ function future_canteen_2022_scripts() {
 	wp_style_add_data( 'future-canteen-2022-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'future-canteen-2022-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'future-canteen-2022-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

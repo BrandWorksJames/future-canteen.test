@@ -965,3 +965,74 @@ html {
 #page * {
 	font-family: 'Archivo Expanded',Helvetica,Arial,sans-serif;
 }
+
+/* Header */
+body.logged-in header {
+	margin-top: 32px;
+}
+
+body.scrolled #masthead {
+	padding: 1.5rem;
+}
+
+body.scrolled #masthead .site-branding img {
+	height: 2.5rem;
+}
+
+body.scrolled #primary {
+	margin-top: 5.5rem;
+}
+
+#masthead {
+	width: 100%;
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 3rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: all 0.3s ease-out;
+}
+
+#masthead .site-branding {
+	font-size: 0;
+}
+
+#masthead .site-branding img {
+	transition: all 0.3s ease-out;
+	height: 4rem;
+	width: auto;
+}
+
+#masthead .site-branding a {
+	font-size: 0;
+}
+
+#masthead #site-navigation {
+	flex: 1;
+}
+
+#masthead #site-navigation ul {
+	gap: 2rem;
+	justify-content: flex-end;
+}
+
+#masthead #site-navigation a {
+	font-family: 'Cygnito Mono',monospace;
+	font-size: 1.4rem;
+	color: #2C2382;
+	text-transform: uppercase;
+	transition: all 0.2s ease;
+}
+
+#masthead #site-navigation a:hover {
+	color: #F28FE4;
+}
+
+#primary {
+	margin-top: 8rem;
+}
