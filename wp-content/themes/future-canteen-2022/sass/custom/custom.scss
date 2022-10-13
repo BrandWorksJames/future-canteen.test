@@ -44,6 +44,20 @@ html {
   * {
     font-family: 'Archivo Expanded',Helvetica,Arial,sans-serif;
   }
+
+  h1, h2 {
+    font-weight: 400;
+    font-family: 'Cygnito Mono',monospace;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-family: 'Cygnito Mono',monospace;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
 }
 
 .post, .page {
@@ -52,8 +66,13 @@ html {
 
 /* Header */
 
-body.logged-in header {
-  margin-top: 32px;
+body.logged-in {
+  header {
+    margin-top: 32px;
+  }
+  #primary .hero {
+    height: calc(100vh - 8rem - 32px);
+  }
 }
 
 body.scrolled {
@@ -122,6 +141,40 @@ body.scrolled {
 
 #primary {
   margin-top: 8rem;
+  overflow-x: hidden;
+
+  .entry-content {
+    margin: 0;
+  }
+
+  .hero {
+    height: calc(100vh - 8rem);
+    position: relative;
+
+    & > .wpb_column {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > .vc_column-inner {
+        padding: 3rem;
+
+        h2 {
+          font-size: 5rem;
+          color: $neonyellow;
+          text-align: center;
+          max-width: 20ch;
+          margin: auto;
+        }
+      }
+    }
+  }
 }
 
 #colophon {
@@ -139,7 +192,7 @@ body.scrolled {
     background-size: 5rem auto;
     background-repeat: no-repeat;
 
-     .site-info {
+    .site-info {
       font-size: 0;
       padding: 0 5rem 0 0;
 
