@@ -966,6 +966,10 @@ html {
 	font-family: 'Archivo Expanded',Helvetica,Arial,sans-serif;
 }
 
+.post, .page {
+	margin: 0;
+}
+
 /* Header */
 body.logged-in header {
 	margin-top: 32px;
@@ -1035,4 +1039,65 @@ body.scrolled #primary {
 
 #primary {
 	margin-top: 8rem;
+}
+
+#colophon {
+	background: #2C2382;
+	font-size: 0;
+}
+
+#colophon #footer-inner {
+	padding: 4rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background: url("/wp-content/uploads/2022/10/footer-stars.svg");
+	background-position: bottom 4rem right 4rem;
+	background-size: 5rem auto;
+	background-repeat: no-repeat;
+}
+
+#colophon #footer-inner .site-info {
+	font-size: 0;
+	padding: 0 5rem 0 0;
+}
+
+#colophon #footer-inner .site-info #footer-logo {
+	width: 6rem;
+	height: auto;
+}
+
+#colophon #footer-inner .menu {
+	padding: 0 5rem 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+#colophon #footer-inner .menu a {
+	font-family: 'Cygnito Mono',monospace;
+	font-size: 1.4rem;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	transition: all 0.2s ease;
+	text-decoration: none;
+}
+
+#colophon #footer-inner .menu a:hover {
+	color: #F28FE4;
+}
+
+#colophon #footer-inner #copyright {
+	margin-left: auto;
+	max-width: 28ch;
+	font-size: 1rem;
+}
+
+#colophon #footer-inner #copyright p {
+	font-family: 'Cygnito Mono',monospace;
+	color: #FFFFFF;
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin: 0 0 0.5rem;
 }

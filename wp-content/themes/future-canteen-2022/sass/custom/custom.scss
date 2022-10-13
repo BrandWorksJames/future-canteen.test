@@ -46,6 +46,10 @@ html {
   }
 }
 
+.post, .page {
+  margin: 0;
+}
+
 /* Header */
 
 body.logged-in header {
@@ -57,8 +61,8 @@ body.scrolled {
     padding: 1.5rem;
 
     .site-branding img {
-     height: 2.5rem;
-   }
+      height: 2.5rem;
+    }
   }
 
   #primary {
@@ -118,4 +122,65 @@ body.scrolled {
 
 #primary {
   margin-top: 8rem;
+}
+
+#colophon {
+  background: $blue;
+  font-size: 0;
+
+  #footer-inner {
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: url('/wp-content/uploads/2022/10/footer-stars.svg');
+    background-position: bottom 4rem right 4rem;
+    background-size: 5rem auto;
+    background-repeat: no-repeat;
+
+     .site-info {
+      font-size: 0;
+      padding: 0 5rem 0 0;
+
+      #footer-logo {
+        width: 6rem;
+        height: auto;
+      }
+    }
+
+    .menu {
+      padding: 0 5rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      a {
+        font-family: 'Cygnito Mono',monospace;
+        font-size: 1.4rem;
+        color: $white;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        text-decoration: none;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+
+    #copyright {
+      margin-left: auto;
+      max-width: 28ch;
+      font-size: 1rem;
+
+      p {
+        font-family: 'Cygnito Mono',monospace;
+        color: $white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 0 0 0.5rem;
+      }
+    }
+  }
 }
