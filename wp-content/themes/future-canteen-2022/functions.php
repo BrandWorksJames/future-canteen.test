@@ -196,3 +196,31 @@ function add_favicon(){
 add_action( 'wp_head', 'add_favicon');
 add_action('login_head', 'add_favicon');
 add_action('admin_head', 'add_favicon');
+
+/**
+ * Custom TinyMCE Colours.
+ */
+
+function ka_override_MCE_options($init)
+  {
+
+    $custom_colors = '
+          "2D2D2D", "Black",
+          "FFFFFF", "White",
+          "2C2382", "Blue",
+          "B5DEE3", "Light Blue",
+          "F7452D", "Bright Red",
+          "F28FE4", "Pink",
+          "F6FB30", "Neon Yellow"
+      ';
+			
+    // build color grid palette
+    $init['textcolor_map'] = '[' . $custom_colors . ']';
+
+    // change the number of rows in the grid if the number of colors changes
+    // 8 swatches per row
+    $init['textcolor_rows'] = 1;
+
+    return $init;
+  }
+  add_filter('tiny_mce_before_init', 'ka_override_MCE_options');
