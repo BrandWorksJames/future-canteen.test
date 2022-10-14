@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Future Canteen 2022
 Theme URI: http://underscores.me/
@@ -1015,7 +1016,7 @@ body.logged-in header {
 	margin-top: 32px;
 }
 
-body.logged-in #primary .hero {
+body.logged-in #primary .hero, body.logged-in #primary #home-hero {
 	height: calc(100vh - 8rem - 32px);
 }
 
@@ -1042,7 +1043,7 @@ body.scrolled #primary {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 	transition: all 0.3s ease-out;
 }
 
@@ -1119,9 +1120,80 @@ body.scrolled #primary {
 	margin: auto;
 }
 
+#primary #home-hero {
+	height: calc(100vh - 8rem);
+}
+
+#primary #home-hero .wpb_column {
+	height: 100%;
+}
+
+#primary #home-hero .wpb_column .vc_column-inner {
+	height: 100%;
+}
+
+#primary #home-hero .wpb_column .vc_column-inner > .wpb_wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#primary #home-hero .wpb_column .vc_column-inner > .wpb_wrapper > div {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+#primary #home-hero .wpb_column .vc_column-inner > .wpb_wrapper > div h1, #primary #home-hero .wpb_column .vc_column-inner > .wpb_wrapper > div span {
+	white-space: nowrap;
+}
+
+#primary #home-hero .wpb_column .vc_column-inner > .wpb_wrapper .vc_empty_space {
+	position: relative;
+}
+
+#primary #home-hero .wpb_column .vc_column-inner > .wpb_wrapper .vc_empty_space::after {
+	position: absolute;
+	content: "^";
+	font-size: 10rem;
+	color: #F6FB30;
+	bottom: 5px;
+	left: 0;
+	width: 100%;
+	font-weight: 400;
+	font-family: 'Cygnito Mono',monospace;
+	text-transform: uppercase;
+	line-height: 1.1;
+	transform: rotate(180deg);
+	text-align: center;
+}
+
+#primary #home-links .wpb_text_column {
+	border-bottom: 3px solid #F6FB30;
+	position: relative;
+	padding: 0.5rem 0;
+}
+
+#primary #home-links .wpb_text_column::after {
+	content: "›";
+	font-weight: 400;
+	font-family: 'Cygnito Mono',monospace;
+	text-transform: uppercase;
+	line-height: 1.1;
+	font-size: 5rem;
+	color: #F6FB30;
+	right: 0;
+	top: 0.5rem;
+	position: absolute;
+}
+
 #primary .wpb_text_column p, #primary .wpb_text_column h3 {
 	max-width: 70ch;
 	margin: 0 auto 1.5rem;
+}
+
+#primary .wpb_text_column h3 + p {
+	margin-top: -1.25rem;
 }
 
 #primary .vc_btn3 {
@@ -1133,16 +1205,57 @@ body.scrolled #primary {
 	line-height: 1;
 	padding: 1rem 2.5rem;
 	border-radius: calc(2rem + 6px);
-}
-
-#primary .blue .vc_btn3 {
 	color: #2C2382;
 	border: 3px solid #2C2382;
 }
 
-#primary .blue .vc_btn3:hover {
+#primary .vc_btn3:hover {
 	background: #2C2382;
 	color: #FFFFFF;
+}
+
+#primary .yellow .vc_btn3 {
+	color: #FFFFFF;
+	border: 3px solid #F6FB30;
+}
+
+#primary .yellow .vc_btn3:hover {
+	background: #F6FB30;
+	color: #2C2382;
+}
+
+#primary h1, #primary h2, #primary h3 {
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+
+#primary h1:last-child, #primary h2:last-child, #primary h3:last-child {
+	margin-bottom: 0;
+}
+
+#primary .vc_column-inner {
+	padding-top: 0;
+}
+
+#primary .vc_column-inner .wpb_text_column {
+	margin-bottom: 0;
+}
+
+#primary .stars {
+	background: url("/wp-content/uploads/2022/10/footer-stars.svg");
+	background-position: top 5rem center;
+	background-size: 5rem auto;
+	background-repeat: no-repeat;
+}
+
+#primary ul {
+	margin: 0;
+	padding-inline-start: 1rem;
+}
+
+#primary ul li {
+	margin-bottom: 1rem;
+	padding-inline-start: 1rem;
 }
 
 #colophon {
