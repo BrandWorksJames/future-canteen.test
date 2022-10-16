@@ -148,10 +148,12 @@ add_action( 'widgets_init', 'future_canteen_2022_widgets_init' );
  */
 function future_canteen_2022_scripts() {
 	wp_enqueue_style( 'future-canteen-2022-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'eocjs-newsticker', get_stylesheet_directory_uri() . '/css/eocjs-newsticker.css', false, '1.0', 'all' );
 	wp_style_add_data( 'future-canteen-2022-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'future-canteen-2022-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'future-canteen-2022-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), _S_VERSION, true );
+	wp_enqueue_script( 'future-canteen-2022-eocjs-newsticker', get_template_directory_uri() . '/js/eocjs-newsticker.js', array( 'jquery' ), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -213,7 +215,7 @@ function ka_override_MCE_options($init)
           "F28FE4", "Pink",
           "F6FB30", "Neon Yellow"
       ';
-			
+
     // build color grid palette
     $init['textcolor_map'] = '[' . $custom_colors . ']';
 
