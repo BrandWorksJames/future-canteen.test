@@ -33,12 +33,27 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'future-canteen-2022' ); ?></button>
+				<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'future-canteen-2022' ); ?></button>-->
 				<?php
 				wp_nav_menu(
 					array(
 						'theme_location' => 'header-menu',
-						/*'menu_id'        => 'primary-menu',*/
+						'menu_id'        => 'desktop-menu',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+			<button class="hamburger hamburger--slider" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+			<nav id="mobile-navigation" class="main-navigation">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'header-menu',
+						'menu_id'        => 'mobile-menu',
 					)
 				);
 				?>

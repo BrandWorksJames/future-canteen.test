@@ -21,8 +21,17 @@ jQuery(document).ready(function($) {
 
   $( "#scroll-click" ).click(function() {
     $('html, body').animate({
-        scrollTop: $("#home-2").offset().top - 128
+      scrollTop: $("#home-2").offset().top - 128
     }, 1500);
+  });
+
+  var $hamburger = $(".hamburger");
+  var $mobilemenu = $("#mobile-navigation");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    $mobilemenu.slideToggle( "slow", function() {
+    // Animation complete.
+  });
   });
 
 });
